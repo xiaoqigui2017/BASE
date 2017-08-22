@@ -40,14 +40,20 @@ public class MainController {
 
 
 
-
-
     @RequestMapping(value = "/getAll")
     @ResponseBody
     public List<Mes> getAllMsg() {
         List<Mes> mesList = messageBoardService.findAllMesBoard();
         System.out.println(mesList);
         return mesList;
+    }
+
+
+    @RequestMapping (value = "/test")
+    @ResponseBody
+    public  String  gittest(){
+
+        return "bbb";
     }
 
 
@@ -60,34 +66,6 @@ public class MainController {
 
 
 
-
-
-
-//    @RequestMapping (value = "/addMessage")
-//    @ResponseBody
-//    public HashMap<String,String> test(@RequestParam("content") String  content){
-//        com.lanou.bean.Mes mes = new com.lanou.bean.Mes();
-//        mes.setContent(content);
-//        messageBoardService.insertMessage(mes);
-//        HashMap<String,String> map = new HashMap<String, String>();
-//        map.put("content",content);
-//        return map ;
-//    }
-
-//    @RequestMapping (value = "/addMessage")
-//    @ResponseBody
-//    public HashMap<String,String> test(@ModelAttribute("content") Mes message){
-//        System.out.println(message.getContent());
-//        System.out.println(message.getUp());
-//        System.out.println(message.getDown());
-//
-//        messageBoardService.insertMessage(message);
-//
-//        HashMap<String,String> map = new HashMap<String, String>();
-//        map.put("content",message.getContent());
-//        return map ;
-//    }
-//
 
 
 

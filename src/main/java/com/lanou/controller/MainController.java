@@ -57,16 +57,21 @@ public class MainController {
     }
 
 
+    //编辑代码
+      @RequestMapping (value = "/branch")
+    @ResponseBody
+    public  String  branchTest(){
+
+        return "branch";
+    }
 
 
+    public  void   test1(){
+        System.out.println("ssss");
+        System.out.println("sssfffffff");
 
 
-
-
-
-
-
-
+    }
 
 
 }
